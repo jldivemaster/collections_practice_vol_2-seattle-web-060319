@@ -19,11 +19,10 @@ end
 def count_elements(array)
   #['one', 'two', 'one', 'one']
   new_arr = []
-  array.each_with_object(count = 0) do |ele, count|
-    ele[count] += 1
-    ele[:count] = ele[count]
-    new_arr << ele
+  array.each_with_object(count = 0) do |item, count|
+    count[item] += 1
+    item[:count] = count[item]
   end
+  new_arr << item
   return new_arr
 end
- #=> {"one"=>3, "two"=>1}
