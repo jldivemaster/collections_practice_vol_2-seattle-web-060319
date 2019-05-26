@@ -55,3 +55,15 @@ def find_cool(cool_arr)
   end
   return new_arr
 end
+
+def organize_schools(schools)
+  new_hash = {}
+  schools.each do |k, v|
+    new_key = v[:location]
+    if !new_hash.has_key?(new_key)
+      new_hash[new_key] = [k]
+    elsif new_hash.has_key?(new_key)
+      new_hash[new_key] << k
+  end
+  return new_hash
+end
