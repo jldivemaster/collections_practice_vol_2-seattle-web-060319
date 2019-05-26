@@ -64,6 +64,7 @@ def organize_schools(schools)
       new_hash[new_key] = [k]
     elsif new_hash.has_key?(new_key)
       new_hash[new_key] << k
+    end
   end
   return new_hash
 end
