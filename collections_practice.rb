@@ -5,5 +5,5 @@ def begins_with_r(tools)
 end
 
 def contain_a(array)
-  array.map { |ele| ele if ele.include?("a") }
+  array.map { |ele| ele if ele.include?("a") }.compact
 end
