@@ -24,5 +24,5 @@ def count_elements(array)
 end
  #=> {"one"=>3, "two"=>1}
 
-    
+
 end
