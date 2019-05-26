@@ -18,8 +18,11 @@ end
 
 def count_elements(array)
   #['one', 'two', 'one', 'one']
-  array.each_with_object(Hash.new(0)) do |item, hash|
-    hash[item] += 1
+  new_arr = []
+  array.each_with_object(Hash.new(0)) do |ele, hash|
+    ele[:count] += 1
+    new_arr << ele
   end
+  return new_arr
 end
  #=> {"one"=>3, "two"=>1}
