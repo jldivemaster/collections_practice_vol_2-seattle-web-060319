@@ -21,8 +21,15 @@ end
 def count_elements(array)
   new_arr = []
 
+  hash = array.each { |ele| ele.uniq }
+  
   thing = array.each_with_object(Hash.new(0)) { |ele, counts| counts[ele] += 1 }
   binding.pry
 
+  
   #return new_arr
+end
+
+def merge_data(v1, v2)
+  v1[0].values.map.with_index {|v, i| v2[i].merge(v)}
 end
