@@ -19,7 +19,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(arr)
-  output_arr = [];
+  output_arr = []
   arr.each do | element |
     counter = element[:count] = 1
     if output_arr.include?(element) == false
