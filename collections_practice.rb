@@ -43,6 +43,15 @@ def merge_data(thing1, thing2)
   return keys
 end
 
-def find_cool()
-
+def find_cool(cool_arr)
+  new_arr = []
+  
+  cool_arr.each do |hash|
+    hash.collect do |k, v| 
+      if v == "cool"
+        new_arr << hash
+      end
+    end
+  end
+  return new_arr
 end
