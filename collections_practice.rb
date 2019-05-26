@@ -21,7 +21,7 @@ end
 def count_elements(arr)
   output_arr = []
   arr.each do | element |
-    counter = element[:count] = 1
+  #  counter = element[:count] = 1
     if output_arr.include?(element) == false
       output_arr << element
   elsif output_arr.include?(element)
