@@ -7,3 +7,7 @@ end
 def contain_a(array)
   array.map { |ele| ele if ele.include?("a") }.compact
 end
+
+def first_wa(array)
+  array.find { |ele| ele if ele.start_with?("wa") }
+end
