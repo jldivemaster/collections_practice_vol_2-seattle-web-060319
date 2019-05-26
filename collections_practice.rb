@@ -18,16 +18,19 @@ def remove_non_strings(array)
   array.select { |ele| ele if ele.is_a?(String) }
 end
 
-def count_elements(array)
-  new_arr = []
-
-  hash = array.each { |ele| ele.uniq }
-
-  thing = array.each_with_object(Hash.new(0)) { |ele, counts| counts[ele] += 1 }
-  #binding.pry
-
-
-  #return new_arr
+def count_elements(arr)
+  output_arr = [];
+  arr.each do | element |
+    counter = element[:count] = 1
+    if output_arr.include?(element) == false
+      output_arr << element
+  elsif output_arr.include?(element)
+      output_arr.map do |el|
+        el[:count] += 1
+      end
+    end
+  end
+  output_arr
 end
 
 def merge_data(thing1, thing2)
