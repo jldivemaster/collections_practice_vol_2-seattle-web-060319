@@ -20,9 +20,9 @@ end
 
 def count_elements(array)
   new_arr = []
-  
+
   array.each_with_object(Hash.new(0)) { |ele, counts| counts[ele] += 1 }
   binding.pry
-  
+
   #return new_arr
 end
