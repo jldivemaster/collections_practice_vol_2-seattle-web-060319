@@ -42,3 +42,7 @@ def merge_data(thing1, thing2)
   end
   return keys
 end
+
+def find_cool()
+  
+end
