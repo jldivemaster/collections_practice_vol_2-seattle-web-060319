@@ -1,4 +1,6 @@
 # your code goes here
+require 'pry'
+
 def begins_with_r(tools)
   tools.all? { |ele| ele.start_with?("r") }
 
@@ -17,12 +19,10 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  #['one', 'two', 'one', 'one']
   new_arr = []
-  array.each_with_object(count = 0) do |item, count|
-    count[item] += 1
-    item[:count] = count[item]
-  end
-  new_arr << item
-  return new_arr
+  
+  array.each_with_object(Hash.new(0)) { |ele, counts| counts[ele] += 1 }
+  binding.pry
+  
+  #return new_arr
 end
