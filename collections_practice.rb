@@ -15,3 +15,14 @@ end
 def remove_non_strings(array)
   array.select { |ele| ele if ele.is_a?(String) }
 end
+
+def count_elements(array)
+  #['one', 'two', 'one', 'one']
+  array.each_with_object(Hash.new(0)) do |item, hash|
+    hash[item] += 1
+  end
+end
+ #=> {"one"=>3, "two"=>1}
+
+    
+end
