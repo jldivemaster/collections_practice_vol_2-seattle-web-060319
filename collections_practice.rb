@@ -25,7 +25,7 @@ def count_elements(arr)
     if output_arr.include?(element) == false
       output_arr << element
   elsif output_arr.include?(element)
-      output_arr.map do |el|
+      output_arr.map do |element|
         element[:count] += 1
       end
     end
