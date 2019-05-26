@@ -45,9 +45,9 @@ end
 
 def find_cool(cool_arr)
   new_arr = []
-  
+
   cool_arr.each do |hash|
-    hash.collect do |k, v| 
+    hash.collect do |k, v|
       if v == "cool"
         new_arr << hash
       end
