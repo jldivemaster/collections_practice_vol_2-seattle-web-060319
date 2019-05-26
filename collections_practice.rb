@@ -31,5 +31,13 @@ def count_elements(array)
 end
 
 def merge_data(thing1, thing2)
-
+  keys.each do |hash|
+    data.each do |ele|
+      ele.each do |k, v|
+        if hash[:first_name] == k
+          hash.merge!(v)
+      end
+    end
+  end
+  return keys
 end
