@@ -36,6 +36,7 @@ def merge_data(thing1, thing2)
       ele.each do |k, v|
         if hash[:first_name] == k
           hash.merge!(v)
+        end
       end
     end
   end
