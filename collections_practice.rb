@@ -9,5 +9,5 @@ def contain_a(array)
 end
 
 def first_wa(array)
-  array.find { |ele| ele if ele.start_with?("wa") }
+  array.find { |ele| ele if ele.to_s.start_with?("wa") }
 end
